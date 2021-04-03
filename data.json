@@ -1,0 +1,20 @@
+{
+    "professors": [
+        {
+            "id": 1,
+            "avatar_url": "http://google.com",
+            "name": "BRUNO BILHERI MONTEIRO",
+            "birth": 835747200000,
+            "gender": "presencial",
+            "created_at": 1615657744671
+        },
+        {
+            "id": 2,
+            "avatar_url": "http://google.com",
+            "name": "Silvia Regina ",
+            "birth": 161222400000,
+            "gender": "distancia",
+            "created_at": 1615657787937
+        }
+    ]
+}
