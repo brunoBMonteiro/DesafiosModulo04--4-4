@@ -3,10 +3,10 @@
 </h1>
 
 <h3 align="center">
-  Desafio 4-3: Formulário e Rota de cadastro do Professor
+  Desafio 4-4: Apresentação, edição e formatação dos dados de um professor
 </h3>
 
-<blockquote align="center">“Tudo deveria se tornar o mais simples possível, mas não simplificado.”</blockquote>
+<blockquote align="center">“Comece fazendo o que é necessário, depois o que é possível, e de repente você estará fazendo o impossível.”</blockquote>
 
 <p align="center">
 
@@ -28,22 +28,22 @@
 
 ## :rocket: Sobre o desafio
 
-Nessa etapa você deve criar um formulário de cadastro do professor e uma rota do tipo `post` que irá realizar as validações e salvar os dados enviados.
+Nessa etapa você deve criar duas rotas: uma para apresentar os dados do professor (show) e outra para a edição dos dados cadastrados (edit). Além disso, realize a formatação dos dados cadastrados para a correta exibição no HTML
 
-### Formulário
+### Show
 
-Os seguintes campos são necessários:
+Crie uma rota para lidar com a apresentação dos dados cadastrados de um professor. Dentro do arquivo `teachers.js`, crie um método `show` para buscar e retornar o professor a partir do `id` fornecido na rota. Os seguintes dados precisam ser formatados:
 
-- Avatar url: campo do tipo `url` para cadastrar o caminho da imagem do professor;
-- Nome completo: campo do tipo `text`;
-- Data de nascimento: campo do tipo `date`;
-- Grau de escolaridade: campo do tipo `select` ([documentação do select](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/select)) que deve conter as opções **Ensino Médio Completo, Ensino Superior Completo, Mestrado e Doutorado**;
-- Tipo de aula: campo do tipo `radio` que deve conter as opções **Presencial e À distância**;
-- Área de atuação: campo do tipo `text` que deve conter as informações das matérias que o professor pode lecionar.
+- Idade: Crie um arquivo `utils.js` que exporta uma função chamada `age`. Essa função deve retornar a idade a partir do parâmetro (data de nascimento) informado;
+- Grau de escolaridade: crie uma função `graduation` no arquivo `utils.js`. Essa função deve retornar o grau de escolaridade formatado a partir do valor do select informado (ex.: **Ensino Médio Completo** para o valor **medio** do `select`);
+- Acompanhamento: Utilize o método `split` da string para gerar um array com as matérias que o professor leciona;
+- Desde: Utilize o constructor `Intl` e seus métodos para gerar uma data no formato `dia/mes/ano`.
 
-### Rota
+Ao fim da apresentação dos dados, crie um link que irá redirecionar para a rota de edição dos dados cadastrados.
 
-Crie um arquivo `teachers.js` na raiz do seu projeto e faça a validação de todos os campos utilizando `keys` e o constructor `Object`. Além disso, utilize o método `writeFile` da lib `fs` para gerar um arquivo json que irá conter um array de todos os professores cadastrados. Ao final desses dois processos (validação e salvamento), faça o redirecionamento para a página de listagem de professores.
+### Edição
+
+Crie uma rota para lidar com a edição dos dados cadastrados de um professor. Dentro do arquivo `teachers.js`, crie um método `edit` para buscar e retornar o professor a partir do `id` fornecido na rota. Utilize a mesma interface da rota de apresentação dos dados do professor (lembrando de fazer o reaproveitamento do form com um arquivo `fields.njk`). Por fim, crie uma função chamada `date` no arquivo `utils.js`. Essa função deve retornar a data no formato `yyyy-mm-dd` para a correta exibição no input do tipo `date` no HTML (lembre de tratar os dias e meses menores que 10 utilizando o método `slice` da string).
 
 ### Estilização
 
