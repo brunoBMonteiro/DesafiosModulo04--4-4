@@ -2,36 +2,38 @@
 
 {% block content %}
     <div class="card">
-        <section class="avatar" style="background: url(https://source.unsplash.com/collection/94804057/500x500) no-repeat center center / cover"></section>
+        <section class="avatar" style="background: url({{ professor.avatar_url }}) no-repeat center center / cover"></section>
         <section class="details">
             <h3>Detalhes</h3>
 
             <div class="item">
                 <div>Nome completo</div>
-                <div>João Silva</div>
+                <div>{{ professor.name }}</div>
             </div>
 
             <div class="item">
                 <div>Idade</div>
-                <div>50</div>
+                <div>{{ professor.birth }}</div>
             </div>
 
             <div class="item">
                 <div>Grau de escolaridade</div>
                 <div>
-                    <span>Matemática</span>
-                    <span>Doutorado</span>
+                    
+                        <span>Matemática</span>
+                        <span>Doutorado</span>
+                        
                 </div>
             </div>
 
             <div class="item">
                 <div>Tipo de aula</div>
-                <div>À Distância</div>
+                <div>{{ professor.gender }}</div>
             </div>
 
             <div class="item">
                 <div>Desde</div>
-                <div>10/07/2020</div>
+                <div>{{ professor.created_at }}</div>
             </div>
 
         </section>

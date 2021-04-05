@@ -11,7 +11,7 @@ exports.show = function(req, res) {
 
     if (!foundProfessor) return res.send("Professor not found!")
 
-    return res.send(foundProfessor)
+    return res.render("professors/show", { professor: foundProfessor })
 }
 
 // create
