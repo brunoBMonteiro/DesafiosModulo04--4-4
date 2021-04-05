@@ -11,6 +11,14 @@ exports.show = function(req, res) {
 
     if (!foundProfessor) return res.send("Professor not found!")
 
+    const professor = {
+        ...foundProfessor,
+        birth: '',
+        gender: '',
+        services: '',
+        created_at: '',
+    }
+
     return res.render("professors/show", { professor: foundProfessor })
 }
 
