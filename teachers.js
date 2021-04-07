@@ -13,13 +13,13 @@ exports.show = function(req, res) {
 
     const professor = {
         ...foundProfessor,
-        birth: '',
-        gender: '',
-        services: '',
-        created_at: '',
+        birth: "",
+        gender: "",
+        services: "",
+        created_at: "",
     }
 
-    return res.render("professors/show", { professor: foundProfessor })
+    return res.render("professors/show", { professor })
 }
 
 // create
