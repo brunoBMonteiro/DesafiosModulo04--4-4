@@ -13,9 +13,9 @@ exports.show = function(req, res) {
 
     const professor = {
         ...foundProfessor,
-        birth: "",
+        age: "",
         gender: "",
-        services: "",
+        services: foundProfessor.services.split(","),
         created_at: "",
     }
 
