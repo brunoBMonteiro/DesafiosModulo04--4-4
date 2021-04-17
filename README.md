@@ -30,6 +30,14 @@
 
 Nessa etapa você deve criar duas rotas: uma para apresentar os dados do professor (show) e outra para a edição dos dados cadastrados (edit). Além disso, realize a formatação dos dados cadastrados para a correta exibição no HTML
 
+## Para abrir o app
+
+- Após clonar o app
+- vá ate o arquivo
+- Abra com "code ."
+- Instale os pacotes com "npm install"
+- Inicie com "npm start"
+
 ### Show
 
 Crie uma rota para lidar com a apresentação dos dados cadastrados de um professor. Dentro do arquivo `teachers.js`, crie um método `show` para buscar e retornar o professor a partir do `id` fornecido na rota. Os seguintes dados precisam ser formatados:
