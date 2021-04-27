@@ -16,7 +16,8 @@
                 <div>
                     <input 
                         type="text" 
-                        name="name" 
+                        name="name"
+                        value={{ professor.name }} 
                         required
                     >
                 </div>
@@ -27,7 +28,8 @@
                 <div>
                     <input 
                         type="date" 
-                        name="birth" 
+                        name="birth"
+                        value={{ professor.birth}} 
                         required
                     >
                 </div>
@@ -72,7 +74,8 @@
                     <input 
                         type="text" 
                         name="services" 
-                        placeholder="Separe os serviços prestados por virgula" 
+                        placeholder="Separe os serviços prestados por virgula"
+                        value={{ professor.services }} 
                         required
                     >
                 </div>
