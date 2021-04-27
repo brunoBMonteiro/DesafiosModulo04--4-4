@@ -1,21 +1,35 @@
 <div class="item">
                 <div>Avatar URL</div>
                 <div>
-                    <input type="url" name="avatar_url" placeholder="http://" required>
+                    <input 
+                        type="url" 
+                        name="avatar_url" 
+                        placeholder="http://"
+                        value="{{ professor.avatar_url }}" 
+                        required
+                    >
                 </div>
             </div>
 
             <div class="item">
                 <div>Nome completo</div>
                 <div>
-                    <input type="text" name="name" required>
+                    <input 
+                        type="text" 
+                        name="name" 
+                        required
+                    >
                 </div>
             </div>
 
             <div class="item">
                 <div>Data de nascimento</div>
                 <div>
-                    <input type="date" name="birth" required>
+                    <input 
+                        type="date" 
+                        name="birth" 
+                        required
+                    >
                 </div>
             </div>
 
@@ -34,15 +48,33 @@
             <div class="item">
                 <div>Tipo de aula</div>
                 <div>
-                    <span><input type="radio" name="gender" value="presencial" checked="checked">Presencial</span>
-                    <span><input type="radio" name="gender" value="distancia">À distancia</span>
+                    <span>
+                        <input 
+                            type="radio" 
+                            name="gender" 
+                            value="presencial" 
+                            checked="checked"
+                        >Presencial
+                    </span>
+                    <span>
+                        <input 
+                            type="radio" 
+                            name="gender" 
+                            value="distancia"
+                        >À distancia
+                    </span>
                 </div>
             </div>
 
             <div class="item">
                 <div>Área de atuação</div>
                 <div>
-                    <input type="text" name="services" placeholder="Separe os serviços prestados por virgula" required>
+                    <input 
+                        type="text" 
+                        name="services" 
+                        placeholder="Separe os serviços prestados por virgula" 
+                        required
+                    >
                 </div>
             </div>
 

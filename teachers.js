@@ -60,6 +60,16 @@ exports.post = function (req, res) {
     //return res.send(req.body)
 }
 
-// update
+// Edit
+exports.edit = function (req, res){
 
-//delete
+    const { id } = req.params 
+
+    const foundProfessor = data.professors.find(function(professor){
+        return id == professor.id 
+    })
+
+    if (!foundProfessor) return res.send("Professor not found!")
+
+    return res.render('professors/edit', { professor: foundProfessor })
+}
