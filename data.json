@@ -1,15 +1,6 @@
 {
   "professors": [
     {
-      "id": 1,
-      "avatar_url": "http://google.com",
-      "name": "Bruno Bilheri Monteiro",
-      "birth": 835747200000,
-      "gender": "presencial",
-      "services": "Desenvolvimento Web, Desenvolvimento Mobile",
-      "created_at": 1618688371811
-    },
-    {
       "id": 2,
       "avatar_url": "http://google.com",
       "name": "Silvia Regina Bilheri",
@@ -62,15 +53,6 @@
       "services": "Gamer, jogos digitais",
       "gender": "presencial",
       "created_at": 1619529923358
-    },
-    {
-      "id": 8,
-      "avatar_url": "http://google.com",
-      "name": "Bruno Silva",
-      "birth": 835228800000,
-      "services": "Desenvolvimento Web, Desenvolvimento Mobile, Engenharia de software",
-      "gender": "checked=\"checked\"",
-      "created_at": 1619533024679
     }
   ]
 }

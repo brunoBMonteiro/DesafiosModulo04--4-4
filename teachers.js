@@ -86,10 +86,9 @@ exports.put = function (req, res) {
     const { id } = req.body 
     let index = 0
 
-    const foundProfessor = data.professors.find(function(professor, index){
-        if(id == professor.id) {
+    const foundProfessor = data.professors.find(function(professor, foundIndex){
+        if (id == professor.id) {
             index = foundIndex
-            return true
         } 
     })
 
@@ -109,4 +108,21 @@ exports.put = function (req, res) {
         return res.redirect(`/professors/${id}`)
     })
 
+}
+
+// Delete
+exports.delete = function(req, res) {
+    const { id } = req.body
+    
+    const filteredProfessors = data.professors.filter(function(professor){
+        return professor.id != id
+    })
+
+    data.professors = filteredProfessors
+
+    fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
+        if (err) return res.send("Write file error!")
+
+        return res.redirect("/professors")
+    })
 }
